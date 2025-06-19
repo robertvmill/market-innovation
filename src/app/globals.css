@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Ensure all inputs and textareas have proper text color */
+input, textarea, select {
+  color: #111827 !important; /* gray-900 */
+}
+
+/* Improve placeholder text readability */
+input::placeholder, textarea::placeholder {
+  color: #6b7280 !important; /* gray-500 - darker than the default gray-400 */
+  opacity: 1 !important;
+}
+
+/* Ensure form controls maintain dark text even when focused */
+input:focus, textarea:focus, select:focus {
+  color: #111827 !important; /* gray-900 */
+}
+
+/* Override any potential browser autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #111827 !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
